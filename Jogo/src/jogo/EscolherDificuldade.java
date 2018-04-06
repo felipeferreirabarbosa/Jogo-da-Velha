@@ -31,11 +31,17 @@ public class EscolherDificuldade extends javax.swing.JFrame {
 
         jChooseIzi = new javax.swing.JButton();
         jChooseHard = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(409, 503));
+        setResizable(false);
+        getContentPane().setLayout(null);
 
-        jChooseIzi.setText("Ridículamente Facil");
+        jChooseIzi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogo/izipizi.png"))); // NOI18N
+        jChooseIzi.setMaximumSize(new java.awt.Dimension(150, 29));
+        jChooseIzi.setMinimumSize(new java.awt.Dimension(150, 29));
+        jChooseIzi.setPreferredSize(new java.awt.Dimension(150, 29));
         jChooseIzi.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jChooseIziMouseClicked(evt);
@@ -46,8 +52,13 @@ public class EscolherDificuldade extends javax.swing.JFrame {
                 jChooseIziActionPerformed(evt);
             }
         });
+        getContentPane().add(jChooseIzi);
+        jChooseIzi.setBounds(110, 400, 180, 80);
 
-        jChooseHard.setText("Praticamente Impossivel");
+        jChooseHard.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogo/Impossible.png"))); // NOI18N
+        jChooseHard.setMaximumSize(new java.awt.Dimension(150, 29));
+        jChooseHard.setMinimumSize(new java.awt.Dimension(150, 29));
+        jChooseHard.setPreferredSize(new java.awt.Dimension(150, 29));
         jChooseHard.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jChooseHardMouseClicked(evt);
@@ -58,46 +69,12 @@ public class EscolherDificuldade extends javax.swing.JFrame {
                 jChooseHardActionPerformed(evt);
             }
         });
+        getContentPane().add(jChooseHard);
+        jChooseHard.setBounds(110, 300, 180, 80);
 
-        jTextField1.setText("NOME DO JOGO");
-        jTextField1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTextField1MouseClicked(evt);
-            }
-        });
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(50, 50, 50)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(110, 110, 110)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jChooseIzi, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jChooseHard, javax.swing.GroupLayout.Alignment.LEADING))))
-                .addContainerGap(50, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 136, Short.MAX_VALUE)
-                .addComponent(jChooseIzi)
-                .addGap(18, 18, 18)
-                .addComponent(jChooseHard)
-                .addGap(111, 111, 111))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogo/background1.jpg"))); // NOI18N
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(-90, -40, 530, 590);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -106,17 +83,9 @@ public class EscolherDificuldade extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jChooseHardActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
-
     private void jChooseIziActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jChooseIziActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jChooseIziActionPerformed
-
-    private void jTextField1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField1MouseClicked
-        
-    }//GEN-LAST:event_jTextField1MouseClicked
 
     private void jChooseIziMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jChooseIziMouseClicked
         EscolherQuemComeca tela = new EscolherQuemComeca();
@@ -179,6 +148,6 @@ public class EscolherDificuldade extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jChooseHard;
     private javax.swing.JButton jChooseIzi;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

@@ -332,7 +332,21 @@ public int MinMaxHard(){
         if(Numero_de_jogadas==2){
             if((matriz[0]==1 & matriz[8]==1) | (matriz[2]==1 & matriz[6]==1)){   
                 return 3;
-            }           
+            }
+            
+            if((matriz[0]==1 | matriz[2]==1) & matriz[7]==1){
+                return 6;
+        }
+            if((matriz[8]==1 | matriz[2]==1) & matriz[3]==1){
+                return 6;
+        }
+            if((matriz[8]==1 | matriz[6]==1) & matriz[1]==1){
+                return 0;
+        }
+        if((matriz[0]==1 | matriz[6]==1) & matriz[7]==1){
+                return 5;
+        }    
+           
         }
         if(matriz[i]==0){
         matriz[i]=-1;

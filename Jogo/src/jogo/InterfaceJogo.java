@@ -28,88 +28,88 @@ public class InterfaceJogo extends javax.swing.JFrame {
     }
     private void setPosition(){
        if(jogo.Tabuleiro[0]==0){
-        jLacuna1.setText("NULL");
+        jLacuna1.setIcon(new ImageIcon(getClass().getResource("place.png")));
        }
        else if(jogo.Tabuleiro[0]==1){
-          jLacuna1.setText("1");
+          jLacuna1.setIcon(new ImageIcon(getClass().getResource("Human.png")));
        }
        else{
-           jLacuna1.setText("2");
+           jLacuna1.setIcon(new ImageIcon(getClass().getResource("Machine.png")));
        }
        if(jogo.Tabuleiro[1]==0){
-         jLacuna2.setText("NULL");
+         jLacuna2.setIcon(new ImageIcon(getClass().getResource("place.png")));
        }
        else if(jogo.Tabuleiro[1]==1){
-          //jLacuna2.setIcon(new ImageIcon(getClass().getResource("super.png")));
-          jLacuna2.setText("1");
+          jLacuna2.setIcon(new ImageIcon(getClass().getResource("Human.png")));
+          //jLacuna2.setText("1");
           
        }
        else {
-           jLacuna2.setText("2");
+           jLacuna2.setIcon(new ImageIcon(getClass().getResource("Machine.png")));
        }
        if(jogo.Tabuleiro[2]==0){
-         jLacuna3.setText("NULL");
+         jLacuna3.setIcon(new ImageIcon(getClass().getResource("place.png")));;
        }
        else if(jogo.Tabuleiro[2]==1){
-          jLacuna3.setText("1");
+          jLacuna3.setIcon(new ImageIcon(getClass().getResource("Human.png")));
        }
        else {
-           jLacuna3.setText("2");
+           jLacuna3.setIcon(new ImageIcon(getClass().getResource("Machine.png")));;
        }
        
        if(jogo.Tabuleiro[3]==0){
-         jLacuna4.setText("NULL");
+         jLacuna4.setIcon(new ImageIcon(getClass().getResource("place.png")));
        }
        else if(jogo.Tabuleiro[3]==1){
-          jLacuna4.setText("1");
+          jLacuna4.setIcon(new ImageIcon(getClass().getResource("Human.png")));
        }
        else {
-           jLacuna4.setText("2");
+           jLacuna4.setIcon(new ImageIcon(getClass().getResource("Machine.png")));
        }
        if(jogo.Tabuleiro[4]==0){
-         jLacuna5.setText("NULL");
+         jLacuna5.setIcon(new ImageIcon(getClass().getResource("place.png")));
        }
        else if(jogo.Tabuleiro[4]==1){
-          jLacuna5.setText("1");
+          jLacuna5.setIcon(new ImageIcon(getClass().getResource("Human.png")));
        }
        else {
-           jLacuna5.setText("2");
+           jLacuna5.setIcon(new ImageIcon(getClass().getResource("Machine.png")));
        }
        if(jogo.Tabuleiro[5]==0){
-         jLacuna6.setText("NULL");
+         jLacuna6.setIcon(new ImageIcon(getClass().getResource("place.png")));
        }
        else if(jogo.Tabuleiro[5]==1){
-          jLacuna6.setText("1");
+          jLacuna6.setIcon(new ImageIcon(getClass().getResource("Human.png")));
        }
        else {
-           jLacuna6.setText("2");
+           jLacuna6.setIcon(new ImageIcon(getClass().getResource("Machine.png")));
        }
        if(jogo.Tabuleiro[6]==0){
-         jLacuna7.setText("NULL");
+         jLacuna7.setIcon(new ImageIcon(getClass().getResource("place.png")));
        }
        else if(jogo.Tabuleiro[6]==1){
-          jLacuna7.setText("1");
+          jLacuna7.setIcon(new ImageIcon(getClass().getResource("Human.png")));
        }
        else {
-           jLacuna7.setText("2");
+           jLacuna7.setIcon(new ImageIcon(getClass().getResource("Machine.png")));
        }
        if(jogo.Tabuleiro[7]==0){
-         jLacuna8.setText("NULL");
+         jLacuna8.setIcon(new ImageIcon(getClass().getResource("place.png")));
        }
        else if(jogo.Tabuleiro[7]==1){
-          jLacuna8.setText("1");
+          jLacuna8.setIcon(new ImageIcon(getClass().getResource("Human.png")));
        }
        else {
-           jLacuna8.setText("2");
+           jLacuna8.setIcon(new ImageIcon(getClass().getResource("Machine.png")));
        }
        if(jogo.Tabuleiro[8]==0){
-         jLacuna9.setText("NULL");
+         jLacuna9.setIcon(new ImageIcon(getClass().getResource("place.png")));
        }
        else if(jogo.Tabuleiro[8]==1){
-          jLacuna9.setText("1");
+          jLacuna9.setIcon(new ImageIcon(getClass().getResource("Human.png")));
        }
        else {
-           jLacuna9.setText("2");
+           jLacuna9.setIcon(new ImageIcon(getClass().getResource("Machine.png")));
        }
     }
             
@@ -133,13 +133,16 @@ public class InterfaceJogo extends javax.swing.JFrame {
         jLacuna9 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(400, 400));
-        setMinimumSize(new java.awt.Dimension(400, 400));
+        setMaximumSize(new java.awt.Dimension(409, 503));
+        setMinimumSize(new java.awt.Dimension(409, 503));
+        setPreferredSize(new java.awt.Dimension(409, 503));
         setResizable(false);
+        getContentPane().setLayout(null);
 
-        jLacuna1.setText("jButton1");
+        jLacuna1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogo/place.png"))); // NOI18N
         jLacuna1.setMaximumSize(new java.awt.Dimension(100, 100));
         jLacuna1.setMinimumSize(new java.awt.Dimension(100, 100));
         jLacuna1.setPreferredSize(new java.awt.Dimension(100, 100));
@@ -156,8 +159,11 @@ public class InterfaceJogo extends javax.swing.JFrame {
                 jLacuna1ActionPerformed(evt);
             }
         });
+        getContentPane().add(jLacuna1);
+        jLacuna1.setBounds(70, 160, 80, 80);
+        jLacuna1.getAccessibleContext().setAccessibleName("jLacuna1");
 
-        jLacuna2.setText("jButton1");
+        jLacuna2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogo/place.png"))); // NOI18N
         jLacuna2.setMaximumSize(new java.awt.Dimension(100, 100));
         jLacuna2.setMinimumSize(new java.awt.Dimension(100, 100));
         jLacuna2.setPreferredSize(new java.awt.Dimension(100, 100));
@@ -174,8 +180,10 @@ public class InterfaceJogo extends javax.swing.JFrame {
                 jLacuna2ActionPerformed(evt);
             }
         });
+        getContentPane().add(jLacuna2);
+        jLacuna2.setBounds(150, 160, 80, 80);
 
-        jLacuna3.setText("jButton1");
+        jLacuna3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogo/place.png"))); // NOI18N
         jLacuna3.setMaximumSize(new java.awt.Dimension(100, 100));
         jLacuna3.setMinimumSize(new java.awt.Dimension(100, 100));
         jLacuna3.setPreferredSize(new java.awt.Dimension(100, 100));
@@ -189,8 +197,10 @@ public class InterfaceJogo extends javax.swing.JFrame {
                 jLacuna3ActionPerformed(evt);
             }
         });
+        getContentPane().add(jLacuna3);
+        jLacuna3.setBounds(230, 160, 80, 80);
 
-        jLacuna4.setText("jButton1");
+        jLacuna4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogo/place.png"))); // NOI18N
         jLacuna4.setMaximumSize(new java.awt.Dimension(100, 100));
         jLacuna4.setMinimumSize(new java.awt.Dimension(100, 100));
         jLacuna4.setPreferredSize(new java.awt.Dimension(100, 100));
@@ -204,8 +214,10 @@ public class InterfaceJogo extends javax.swing.JFrame {
                 jLacuna4ActionPerformed(evt);
             }
         });
+        getContentPane().add(jLacuna4);
+        jLacuna4.setBounds(70, 240, 80, 80);
 
-        jLacuna5.setText("jButton1");
+        jLacuna5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogo/place.png"))); // NOI18N
         jLacuna5.setMaximumSize(new java.awt.Dimension(100, 100));
         jLacuna5.setMinimumSize(new java.awt.Dimension(100, 100));
         jLacuna5.setPreferredSize(new java.awt.Dimension(100, 100));
@@ -219,8 +231,10 @@ public class InterfaceJogo extends javax.swing.JFrame {
                 jLacuna5ActionPerformed(evt);
             }
         });
+        getContentPane().add(jLacuna5);
+        jLacuna5.setBounds(150, 240, 80, 80);
 
-        jLacuna6.setText("jButton1");
+        jLacuna6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogo/place.png"))); // NOI18N
         jLacuna6.setMaximumSize(new java.awt.Dimension(100, 100));
         jLacuna6.setMinimumSize(new java.awt.Dimension(100, 100));
         jLacuna6.setPreferredSize(new java.awt.Dimension(100, 100));
@@ -234,8 +248,10 @@ public class InterfaceJogo extends javax.swing.JFrame {
                 jLacuna6ActionPerformed(evt);
             }
         });
+        getContentPane().add(jLacuna6);
+        jLacuna6.setBounds(230, 240, 80, 80);
 
-        jLacuna7.setText("jButton1");
+        jLacuna7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogo/place.png"))); // NOI18N
         jLacuna7.setMaximumSize(new java.awt.Dimension(100, 100));
         jLacuna7.setMinimumSize(new java.awt.Dimension(100, 100));
         jLacuna7.setPreferredSize(new java.awt.Dimension(100, 100));
@@ -249,8 +265,10 @@ public class InterfaceJogo extends javax.swing.JFrame {
                 jLacuna7ActionPerformed(evt);
             }
         });
+        getContentPane().add(jLacuna7);
+        jLacuna7.setBounds(70, 320, 80, 80);
 
-        jLacuna8.setText("jButton1");
+        jLacuna8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogo/place.png"))); // NOI18N
         jLacuna8.setMaximumSize(new java.awt.Dimension(100, 100));
         jLacuna8.setMinimumSize(new java.awt.Dimension(100, 100));
         jLacuna8.setPreferredSize(new java.awt.Dimension(100, 100));
@@ -264,8 +282,10 @@ public class InterfaceJogo extends javax.swing.JFrame {
                 jLacuna8ActionPerformed(evt);
             }
         });
+        getContentPane().add(jLacuna8);
+        jLacuna8.setBounds(150, 320, 80, 80);
 
-        jLacuna9.setText("jButton1");
+        jLacuna9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogo/place.png"))); // NOI18N
         jLacuna9.setMaximumSize(new java.awt.Dimension(100, 100));
         jLacuna9.setMinimumSize(new java.awt.Dimension(100, 100));
         jLacuna9.setPreferredSize(new java.awt.Dimension(100, 100));
@@ -279,69 +299,20 @@ public class InterfaceJogo extends javax.swing.JFrame {
                 jLacuna9ActionPerformed(evt);
             }
         });
+        getContentPane().add(jLacuna9);
+        jLacuna9.setBounds(230, 320, 80, 80);
 
         jLabel2.setText("Jogadas: 0");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(12, 12, 175, 64);
 
         jLabel3.setText("Vencedor: 0");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(205, 36, 175, 17);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(50, 50, 50)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLacuna7, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(jLacuna8, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(jLacuna9, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLacuna1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLacuna4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLacuna5, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLacuna2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(0, 0, 0)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLacuna6, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLacuna3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(20, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLacuna1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLacuna2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLacuna3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 0, 0)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLacuna4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLacuna5, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLacuna6, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLacuna9, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLacuna8, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLacuna7, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 16, Short.MAX_VALUE))
-        );
-
-        jLacuna1.getAccessibleContext().setAccessibleName("jLacuna1");
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogo/background.jpg"))); // NOI18N
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(-90, -40, 530, 590);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -410,7 +381,12 @@ public class InterfaceJogo extends javax.swing.JFrame {
             opcoes[2]= new String("Fechar jogo");
             int i=-1;
             while(i==-1){
-            i= JOptionPane.showOptionDialog(rootPane, "Vencedor: Jogador "+jogo.getVencedor()+" ", "Vencedor",0, JOptionPane.INFORMATION_MESSAGE, null,opcoes,null);
+                if(jogo.getVencedor()==1)
+                    i= JOptionPane.showOptionDialog(rootPane, "Vencedor: Humano! Parabéns ", "Vencedor",0, JOptionPane.INFORMATION_MESSAGE, null,opcoes,null);
+                if(jogo.getVencedor()==2)
+                    i= JOptionPane.showOptionDialog(rootPane, "Vencedor: Máquina! %&%&%*! -A Máquina ri de você  ", "Vencedor",0, JOptionPane.INFORMATION_MESSAGE, null,opcoes,null);
+                if(jogo.getVencedor()==3)
+                    i= JOptionPane.showOptionDialog(rootPane, "Empatou!", "Vencedor",0, JOptionPane.INFORMATION_MESSAGE, null,opcoes,null);
             }
             if(i==0){
                 jogo.Reiniciar_Partida();
@@ -461,7 +437,12 @@ public class InterfaceJogo extends javax.swing.JFrame {
             opcoes[2]= new String("Fechar jogo");
             int i=-1;
             while(i==-1){
-            i= JOptionPane.showOptionDialog(rootPane, "Vencedor: Jogador "+jogo.getVencedor()+" ", "Vencedor",0, JOptionPane.INFORMATION_MESSAGE, null,opcoes,null);
+            if(jogo.getVencedor()==1)
+                    i= JOptionPane.showOptionDialog(rootPane, "Vencedor: Humano! Parabéns ", "Vencedor",0, JOptionPane.INFORMATION_MESSAGE, null,opcoes,null);
+                if(jogo.getVencedor()==2)
+                    i= JOptionPane.showOptionDialog(rootPane, "Vencedor: Máquina! %&%&%*! -A Máquina ri de você  ", "Vencedor",0, JOptionPane.INFORMATION_MESSAGE, null,opcoes,null);
+                if(jogo.getVencedor()==3)
+                    i= JOptionPane.showOptionDialog(rootPane, "Empatou!", "Vencedor",0, JOptionPane.INFORMATION_MESSAGE, null,opcoes,null);
             }
             if(i==0){
                 jogo.Reiniciar_Partida();
@@ -502,7 +483,12 @@ public class InterfaceJogo extends javax.swing.JFrame {
             opcoes[2]= new String("Fechar jogo");
             int i=-1;
             while(i==-1){
-            i= JOptionPane.showOptionDialog(rootPane, "Vencedor: Jogador "+jogo.getVencedor()+" ", "Vencedor",0, JOptionPane.INFORMATION_MESSAGE, null,opcoes,null);
+            if(jogo.getVencedor()==1)
+                    i= JOptionPane.showOptionDialog(rootPane, "Vencedor: Humano! Parabéns ", "Vencedor",0, JOptionPane.INFORMATION_MESSAGE, null,opcoes,null);
+                if(jogo.getVencedor()==2)
+                    i= JOptionPane.showOptionDialog(rootPane, "Vencedor: Máquina! %&%&%*! -A Máquina ri de você  ", "Vencedor",0, JOptionPane.INFORMATION_MESSAGE, null,opcoes,null);
+                if(jogo.getVencedor()==3)
+                    i= JOptionPane.showOptionDialog(rootPane, "Empatou!", "Vencedor",0, JOptionPane.INFORMATION_MESSAGE, null,opcoes,null);
             }
             if(i==0){
                 jogo.Reiniciar_Partida();
@@ -544,7 +530,12 @@ public class InterfaceJogo extends javax.swing.JFrame {
             opcoes[2]= new String("Fechar jogo");
             int i=-1;
             while(i==-1){
-            i= JOptionPane.showOptionDialog(rootPane, "Vencedor: Jogador "+jogo.getVencedor()+" ", "Vencedor",0, JOptionPane.INFORMATION_MESSAGE, null,opcoes,null);
+            if(jogo.getVencedor()==1)
+                    i= JOptionPane.showOptionDialog(rootPane, "Vencedor: Humano! Parabéns ", "Vencedor",0, JOptionPane.INFORMATION_MESSAGE, null,opcoes,null);
+                if(jogo.getVencedor()==2)
+                    i= JOptionPane.showOptionDialog(rootPane, "Vencedor: Máquina! %&%&%*! -A Máquina ri de você  ", "Vencedor",0, JOptionPane.INFORMATION_MESSAGE, null,opcoes,null);
+                if(jogo.getVencedor()==3)
+                    i= JOptionPane.showOptionDialog(rootPane, "Empatou!", "Vencedor",0, JOptionPane.INFORMATION_MESSAGE, null,opcoes,null);
             
             }
             if(i==0){
@@ -586,7 +577,12 @@ public class InterfaceJogo extends javax.swing.JFrame {
             opcoes[2]= new String("Fechar jogo");
             int i=-1;
             while(i==-1){
-            i= JOptionPane.showOptionDialog(rootPane, "Vencedor: Jogador "+jogo.getVencedor()+" ", "Vencedor",0, JOptionPane.INFORMATION_MESSAGE, null,opcoes,null);
+            if(jogo.getVencedor()==1)
+                    i= JOptionPane.showOptionDialog(rootPane, "Vencedor: Humano! Parabéns ", "Vencedor",0, JOptionPane.INFORMATION_MESSAGE, null,opcoes,null);
+                if(jogo.getVencedor()==2)
+                    i= JOptionPane.showOptionDialog(rootPane, "Vencedor: Máquina! %&%&%*! -A Máquina ri de você  ", "Vencedor",0, JOptionPane.INFORMATION_MESSAGE, null,opcoes,null);
+                if(jogo.getVencedor()==3)
+                    i= JOptionPane.showOptionDialog(rootPane, "Empatou!", "Vencedor",0, JOptionPane.INFORMATION_MESSAGE, null,opcoes,null);
             
             }
             if(i==0){
@@ -628,7 +624,12 @@ public class InterfaceJogo extends javax.swing.JFrame {
             opcoes[2]= new String("Fechar jogo");
             int i=-1;
             while(i==-1){
-            i= JOptionPane.showOptionDialog(rootPane, "Vencedor: Jogador "+jogo.getVencedor()+" ", "Vencedor",0, JOptionPane.INFORMATION_MESSAGE, null,opcoes,null);
+            if(jogo.getVencedor()==1)
+                    i= JOptionPane.showOptionDialog(rootPane, "Vencedor: Humano! Parabéns ", "Vencedor",0, JOptionPane.INFORMATION_MESSAGE, null,opcoes,null);
+                if(jogo.getVencedor()==2)
+                    i= JOptionPane.showOptionDialog(rootPane, "Vencedor: Máquina! %&%&%*! -A Máquina ri de você  ", "Vencedor",0, JOptionPane.INFORMATION_MESSAGE, null,opcoes,null);
+                if(jogo.getVencedor()==3)
+                    i= JOptionPane.showOptionDialog(rootPane, "Empatou!", "Vencedor",0, JOptionPane.INFORMATION_MESSAGE, null,opcoes,null);
             
             }
             if(i==0){
@@ -670,7 +671,12 @@ public class InterfaceJogo extends javax.swing.JFrame {
             opcoes[2]= new String("Fechar jogo");
             int i=-1;
             while(i==-1){
-            i= JOptionPane.showOptionDialog(rootPane, "Vencedor: Jogador "+jogo.getVencedor()+" ", "Vencedor",0, JOptionPane.INFORMATION_MESSAGE, null,opcoes,null);
+            if(jogo.getVencedor()==1)
+                    i= JOptionPane.showOptionDialog(rootPane, "Vencedor: Humano! Parabéns ", "Vencedor",0, JOptionPane.INFORMATION_MESSAGE, null,opcoes,null);
+                if(jogo.getVencedor()==2)
+                    i= JOptionPane.showOptionDialog(rootPane, "Vencedor: Máquina! %&%&%*! -A Máquina ri de você  ", "Vencedor",0, JOptionPane.INFORMATION_MESSAGE, null,opcoes,null);
+                if(jogo.getVencedor()==3)
+                    i= JOptionPane.showOptionDialog(rootPane, "Empatou!", "Vencedor",0, JOptionPane.INFORMATION_MESSAGE, null,opcoes,null);
             
             }
             if(i==0){
@@ -712,7 +718,12 @@ public class InterfaceJogo extends javax.swing.JFrame {
             opcoes[2]= new String("Fechar jogo");
             int i=-1;
             while(i==-1){
-            i= JOptionPane.showOptionDialog(rootPane, "Vencedor: Jogador "+jogo.getVencedor()+" ", "Vencedor",0, JOptionPane.INFORMATION_MESSAGE, null,opcoes,null);
+            if(jogo.getVencedor()==1)
+                    i= JOptionPane.showOptionDialog(rootPane, "Vencedor: Humano! Parabéns ", "Vencedor",0, JOptionPane.INFORMATION_MESSAGE, null,opcoes,null);
+                if(jogo.getVencedor()==2)
+                    i= JOptionPane.showOptionDialog(rootPane, "Vencedor: Máquina! %&%&%*! -A Máquina ri de você  ", "Vencedor",0, JOptionPane.INFORMATION_MESSAGE, null,opcoes,null);
+                if(jogo.getVencedor()==3)
+                    i= JOptionPane.showOptionDialog(rootPane, "Empatou!", "Vencedor",0, JOptionPane.INFORMATION_MESSAGE, null,opcoes,null);
             
             }
             if(i==0){
@@ -755,7 +766,12 @@ public class InterfaceJogo extends javax.swing.JFrame {
             opcoes[2]= new String("Fechar jogo");
             int i=-1;
             while(i==-1){
-            i= JOptionPane.showOptionDialog(rootPane, "Vencedor: Jogador "+jogo.getVencedor()+" ", "Vencedor",0, JOptionPane.INFORMATION_MESSAGE, null,opcoes,null);
+            if(jogo.getVencedor()==1)
+                    i= JOptionPane.showOptionDialog(rootPane, "Vencedor: Humano! Parabéns ", "Vencedor",0, JOptionPane.INFORMATION_MESSAGE, null,opcoes,null);
+                if(jogo.getVencedor()==2)
+                    i= JOptionPane.showOptionDialog(rootPane, "Vencedor: Máquina! %&%&%*! -A Máquina ri de você  ", "Vencedor",0, JOptionPane.INFORMATION_MESSAGE, null,opcoes,null);
+                if(jogo.getVencedor()==3)
+                    i= JOptionPane.showOptionDialog(rootPane, "Empatou!", "Vencedor",0, JOptionPane.INFORMATION_MESSAGE, null,opcoes,null);
             
             }
             if(i==0){
@@ -820,6 +836,7 @@ public class InterfaceJogo extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JButton jLacuna1;
