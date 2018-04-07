@@ -131,8 +131,6 @@ public class InterfaceJogo extends javax.swing.JFrame {
         jLacuna7 = new javax.swing.JButton();
         jLacuna8 = new javax.swing.JButton();
         jLacuna9 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -160,7 +158,7 @@ public class InterfaceJogo extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jLacuna1);
-        jLacuna1.setBounds(70, 160, 80, 80);
+        jLacuna1.setBounds(80, 160, 80, 80);
         jLacuna1.getAccessibleContext().setAccessibleName("jLacuna1");
 
         jLacuna2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogo/place.png"))); // NOI18N
@@ -181,7 +179,7 @@ public class InterfaceJogo extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jLacuna2);
-        jLacuna2.setBounds(150, 160, 80, 80);
+        jLacuna2.setBounds(160, 160, 80, 80);
 
         jLacuna3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogo/place.png"))); // NOI18N
         jLacuna3.setMaximumSize(new java.awt.Dimension(100, 100));
@@ -198,7 +196,7 @@ public class InterfaceJogo extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jLacuna3);
-        jLacuna3.setBounds(230, 160, 80, 80);
+        jLacuna3.setBounds(240, 160, 80, 80);
 
         jLacuna4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogo/place.png"))); // NOI18N
         jLacuna4.setMaximumSize(new java.awt.Dimension(100, 100));
@@ -215,7 +213,7 @@ public class InterfaceJogo extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jLacuna4);
-        jLacuna4.setBounds(70, 240, 80, 80);
+        jLacuna4.setBounds(80, 240, 80, 80);
 
         jLacuna5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogo/place.png"))); // NOI18N
         jLacuna5.setMaximumSize(new java.awt.Dimension(100, 100));
@@ -232,7 +230,7 @@ public class InterfaceJogo extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jLacuna5);
-        jLacuna5.setBounds(150, 240, 80, 80);
+        jLacuna5.setBounds(160, 240, 80, 80);
 
         jLacuna6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogo/place.png"))); // NOI18N
         jLacuna6.setMaximumSize(new java.awt.Dimension(100, 100));
@@ -249,7 +247,7 @@ public class InterfaceJogo extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jLacuna6);
-        jLacuna6.setBounds(230, 240, 80, 80);
+        jLacuna6.setBounds(240, 240, 80, 80);
 
         jLacuna7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogo/place.png"))); // NOI18N
         jLacuna7.setMaximumSize(new java.awt.Dimension(100, 100));
@@ -266,7 +264,7 @@ public class InterfaceJogo extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jLacuna7);
-        jLacuna7.setBounds(70, 320, 80, 80);
+        jLacuna7.setBounds(80, 320, 80, 80);
 
         jLacuna8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogo/place.png"))); // NOI18N
         jLacuna8.setMaximumSize(new java.awt.Dimension(100, 100));
@@ -283,7 +281,7 @@ public class InterfaceJogo extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jLacuna8);
-        jLacuna8.setBounds(150, 320, 80, 80);
+        jLacuna8.setBounds(160, 320, 80, 80);
 
         jLacuna9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogo/place.png"))); // NOI18N
         jLacuna9.setMaximumSize(new java.awt.Dimension(100, 100));
@@ -300,17 +298,10 @@ public class InterfaceJogo extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jLacuna9);
-        jLacuna9.setBounds(230, 320, 80, 80);
-
-        jLabel2.setText("Jogadas: 0");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(12, 12, 175, 64);
-
-        jLabel3.setText("Vencedor: 0");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(205, 36, 175, 17);
+        jLacuna9.setBounds(240, 320, 80, 80);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogo/background.jpg"))); // NOI18N
+        jLabel1.setPreferredSize(new java.awt.Dimension(409, 540));
         getContentPane().add(jLabel1);
         jLabel1.setBounds(-90, -40, 530, 590);
 
@@ -326,8 +317,7 @@ public class InterfaceJogo extends javax.swing.JFrame {
             jogo.Escolher2();
             jogo.Jogar(jogo.QuemJoga(),Dificuldade);
             jogo.QuemVenceu();
-            this.jLabel2.setText("Jogadas: "+jogo.getNumero_de_jogadas());
-            this.jLabel3.setText("Vencedor: "+jogo.getVencedor());     
+               
         }
         this.setPosition();
     }
@@ -372,8 +362,6 @@ public class InterfaceJogo extends javax.swing.JFrame {
         jogo.Jogar(jogo.QuemJoga(),Dificuldade);
         this.setPosition();
         jogo.QuemVenceu();
-        this.jLabel2.setText("Jogadas: "+jogo.getNumero_de_jogadas());
-        this.jLabel3.setText("Vencedor: "+jogo.getVencedor());
         if(jogo.getVencedor()!=0){
             String[] opcoes = new String[3];
             opcoes[0]= new String("Reiniciar Esta Partida");
@@ -397,8 +385,6 @@ public class InterfaceJogo extends javax.swing.JFrame {
                 jogo.Jogar(jogo.QuemJoga(),Dificuldade);
                 }
             this.setPosition();
-            this.jLabel2.setText("Jogadas: "+0);
-            this.jLabel3.setText("Vencedor: "+0);
             }
             else if(i==2){
                 this.dispose();
@@ -428,8 +414,6 @@ public class InterfaceJogo extends javax.swing.JFrame {
         jogo.Jogar(jogo.QuemJoga(),Dificuldade);
         this.setPosition();
         jogo.QuemVenceu();
-        this.jLabel2.setText("Jogadas: "+jogo.getNumero_de_jogadas());
-        this.jLabel3.setText("Vencedor: "+jogo.getVencedor());
         if(jogo.getVencedor()!=0){
             String[] opcoes = new String[3];
             opcoes[0]= new String("Reiniciar Esta Partida");
@@ -453,8 +437,6 @@ public class InterfaceJogo extends javax.swing.JFrame {
                 jogo.Jogar(jogo.QuemJoga(),Dificuldade);
                 }
             this.setPosition();
-            this.jLabel2.setText("Jogadas: "+0);
-            this.jLabel3.setText("Vencedor: "+0);
             }
             else if(i==2){
                 this.dispose();
@@ -474,8 +456,6 @@ public class InterfaceJogo extends javax.swing.JFrame {
         jogo.Jogar(jogo.QuemJoga(),Dificuldade);
         this.setPosition();
         jogo.QuemVenceu();
-        this.jLabel2.setText("Jogadas: "+jogo.getNumero_de_jogadas());
-        this.jLabel3.setText("Vencedor: "+jogo.getVencedor());
         if(jogo.getVencedor()!=0){
             String[] opcoes = new String[3];
             opcoes[0]= new String("Reiniciar Esta Partida");
@@ -499,9 +479,7 @@ public class InterfaceJogo extends javax.swing.JFrame {
                 jogo.Jogar(jogo.QuemJoga(),Dificuldade);
                 }
             this.setPosition();
-            this.jLabel2.setText("Jogadas: "+0);
-            this.jLabel3.setText("Vencedor: "+0);
-            }
+        }
             
             else if(i==2){
                 this.dispose();
@@ -521,8 +499,6 @@ public class InterfaceJogo extends javax.swing.JFrame {
         jogo.Jogar(jogo.QuemJoga(),Dificuldade);
         this.setPosition();
         jogo.QuemVenceu();
-        this.jLabel2.setText("Jogadas: "+jogo.getNumero_de_jogadas());
-        this.jLabel3.setText("Vencedor: "+jogo.getVencedor());
         if(jogo.getVencedor()!=0){
             String[] opcoes = new String[3];
             opcoes[0]= new String("Reiniciar Esta Partida");
@@ -547,8 +523,6 @@ public class InterfaceJogo extends javax.swing.JFrame {
                 jogo.Jogar(jogo.QuemJoga(),Dificuldade);
                 }
             this.setPosition();
-            this.jLabel2.setText("Jogadas: "+0);
-            this.jLabel3.setText("Vencedor: "+0);
             }
             else if(i==2){
                 this.dispose();
@@ -568,8 +542,6 @@ public class InterfaceJogo extends javax.swing.JFrame {
         jogo.Jogar(jogo.QuemJoga(),Dificuldade);
         this.setPosition();
         jogo.QuemVenceu();
-        this.jLabel2.setText("Jogadas: "+jogo.getNumero_de_jogadas());
-        this.jLabel3.setText("Vencedor: "+jogo.getVencedor());
         if(jogo.getVencedor()!=0){
             String[] opcoes = new String[3];
             opcoes[0]= new String("Reiniciar Esta Partida");
@@ -594,8 +566,6 @@ public class InterfaceJogo extends javax.swing.JFrame {
                 jogo.Jogar(jogo.QuemJoga(),Dificuldade);
                 }
             this.setPosition();
-            this.jLabel2.setText("Jogadas: "+0);
-            this.jLabel3.setText("Vencedor: "+0);
             }
             else if(i==2){
                 this.dispose();
@@ -615,8 +585,6 @@ public class InterfaceJogo extends javax.swing.JFrame {
         jogo.Jogar(jogo.QuemJoga(),Dificuldade);
         this.setPosition();
         jogo.QuemVenceu();
-        this.jLabel2.setText("Jogadas: "+jogo.getNumero_de_jogadas());
-        this.jLabel3.setText("Vencedor: "+jogo.getVencedor());
         if(jogo.getVencedor()!=0){
             String[] opcoes = new String[3];
             opcoes[0]= new String("Reiniciar Esta Partida");
@@ -641,8 +609,6 @@ public class InterfaceJogo extends javax.swing.JFrame {
                 jogo.Jogar(jogo.QuemJoga(),Dificuldade);
                 }
             this.setPosition();
-            this.jLabel2.setText("Jogadas: "+0);
-            this.jLabel3.setText("Vencedor: "+0);
             }
             else if(i==2){
                 this.dispose();
@@ -662,8 +628,6 @@ public class InterfaceJogo extends javax.swing.JFrame {
         jogo.Jogar(jogo.QuemJoga(),Dificuldade);
         this.setPosition();
         jogo.QuemVenceu();
-        this.jLabel2.setText("Jogadas: "+jogo.getNumero_de_jogadas());
-        this.jLabel3.setText("Vencedor: "+jogo.getVencedor());
         if(jogo.getVencedor()!=0){
             String[] opcoes = new String[3];
             opcoes[0]= new String("Reiniciar Esta Partida");
@@ -688,9 +652,7 @@ public class InterfaceJogo extends javax.swing.JFrame {
                 jogo.Jogar(jogo.QuemJoga(),Dificuldade);
                 }
             this.setPosition();
-            this.jLabel2.setText("Jogadas: "+0);
-            this.jLabel3.setText("Vencedor: "+0);
-            }
+           }
             else if(i==2){
                 this.dispose();
             }
@@ -709,8 +671,6 @@ public class InterfaceJogo extends javax.swing.JFrame {
         jogo.Jogar(jogo.QuemJoga(),Dificuldade);
         this.setPosition();
         jogo.QuemVenceu();
-        this.jLabel2.setText("Jogadas: "+jogo.getNumero_de_jogadas());
-        this.jLabel3.setText("Vencedor: "+jogo.getVencedor());
         if(jogo.getVencedor()!=0){
             String[] opcoes = new String[3];
             opcoes[0]= new String("Reiniciar Esta Partida");
@@ -736,8 +696,6 @@ public class InterfaceJogo extends javax.swing.JFrame {
                 jogo.Jogar(jogo.QuemJoga(), Dificuldade);
                 }
             this.setPosition();
-            this.jLabel2.setText("Jogadas: "+0);
-            this.jLabel3.setText("Vencedor: "+0);
             }
             else if(i==2){
                 this.dispose();
@@ -757,8 +715,6 @@ public class InterfaceJogo extends javax.swing.JFrame {
         jogo.Jogar(jogo.QuemJoga(),Dificuldade);
         this.setPosition();
         jogo.QuemVenceu();
-        this.jLabel2.setText("Jogadas: "+jogo.getNumero_de_jogadas());
-        this.jLabel3.setText("Vencedor: "+jogo.getVencedor());
         if(jogo.getVencedor()!=0){
             String[] opcoes = new String[3];
             opcoes[0]= new String("Reiniciar Esta Partida");
@@ -783,8 +739,6 @@ public class InterfaceJogo extends javax.swing.JFrame {
                 jogo.Jogar(jogo.QuemJoga(),Dificuldade);
                 }
             this.setPosition();
-            this.jLabel2.setText("Jogadas: "+0);
-            this.jLabel3.setText("Vencedor: "+0);
             }
             else if(i==2){
                 this.dispose();
@@ -837,8 +791,6 @@ public class InterfaceJogo extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JButton jLacuna1;
     private javax.swing.JButton jLacuna2;
     private javax.swing.JButton jLacuna3;

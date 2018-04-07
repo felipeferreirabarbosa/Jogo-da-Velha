@@ -35,7 +35,7 @@ public class EscolherModo extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(0, 0));
-        setPreferredSize(new java.awt.Dimension(409, 503));
+        setPreferredSize(new java.awt.Dimension(409, 540));
         setResizable(false);
         getContentPane().setLayout(null);
 
@@ -54,7 +54,6 @@ public class EscolherModo extends javax.swing.JFrame {
         jChooseHuman.setBounds(120, 290, 180, 80);
 
         jChooseMachine.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogo/machinevs.png"))); // NOI18N
-        jChooseMachine.setActionCommand("");
         jChooseMachine.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jChooseMachineMouseClicked(evt);
@@ -78,8 +77,9 @@ public class EscolherModo extends javax.swing.JFrame {
         jIPMachine.setBounds(100, 470, 235, 27);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogo/background1.jpg"))); // NOI18N
+        jLabel3.setPreferredSize(new java.awt.Dimension(409, 540));
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(-90, 0, 500, 500);
+        jLabel3.setBounds(-90, -40, 500, 580);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

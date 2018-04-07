@@ -34,7 +34,7 @@ public class EscolherDificuldade extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(409, 503));
+        setPreferredSize(new java.awt.Dimension(409, 540));
         setResizable(false);
         getContentPane().setLayout(null);
 
@@ -53,7 +53,7 @@ public class EscolherDificuldade extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jChooseIzi);
-        jChooseIzi.setBounds(110, 400, 180, 80);
+        jChooseIzi.setBounds(120, 380, 180, 80);
 
         jChooseHard.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogo/Impossible.png"))); // NOI18N
         jChooseHard.setMaximumSize(new java.awt.Dimension(150, 29));
@@ -70,11 +70,12 @@ public class EscolherDificuldade extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jChooseHard);
-        jChooseHard.setBounds(110, 300, 180, 80);
+        jChooseHard.setBounds(120, 290, 180, 80);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogo/background1.jpg"))); // NOI18N
+        jLabel1.setPreferredSize(new java.awt.Dimension(409, 540));
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(-90, -40, 530, 590);
+        jLabel1.setBounds(-90, -40, 500, 580);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
