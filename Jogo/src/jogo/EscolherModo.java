@@ -29,8 +29,6 @@ public class EscolherModo extends javax.swing.JFrame {
     private void initComponents() {
 
         jChooseHuman = new javax.swing.JButton();
-        jChooseMachine = new javax.swing.JButton();
-        jIPMachine = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -51,30 +49,7 @@ public class EscolherModo extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jChooseHuman);
-        jChooseHuman.setBounds(120, 290, 180, 80);
-
-        jChooseMachine.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogo/machinevs.png"))); // NOI18N
-        jChooseMachine.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jChooseMachineMouseClicked(evt);
-            }
-        });
-        jChooseMachine.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jChooseMachineActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jChooseMachine);
-        jChooseMachine.setBounds(120, 380, 180, 80);
-
-        jIPMachine.setText("IP_Maquina");
-        jIPMachine.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jIPMachineActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jIPMachine);
-        jIPMachine.setBounds(100, 470, 235, 27);
+        jChooseHuman.setBounds(120, 360, 180, 80);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogo/background1.jpg"))); // NOI18N
         jLabel3.setPreferredSize(new java.awt.Dimension(409, 540));
@@ -84,10 +59,6 @@ public class EscolherModo extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jChooseMachineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jChooseMachineActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jChooseMachineActionPerformed
-
     private void jChooseHumanMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jChooseHumanMouseClicked
         EscolherDificuldade tela = new EscolherDificuldade();
         tela.setVisible(true);
@@ -95,20 +66,9 @@ public class EscolherModo extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jChooseHumanMouseClicked
 
-    private void jChooseMachineMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jChooseMachineMouseClicked
-        EscolherDificuldade tela = new EscolherDificuldade();
-        tela.setVisible(true);
-        tela.EscolherModo2();
-        this.dispose();
-    }//GEN-LAST:event_jChooseMachineMouseClicked
-
     private void jChooseHumanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jChooseHumanActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jChooseHumanActionPerformed
-
-    private void jIPMachineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jIPMachineActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jIPMachineActionPerformed
 
     /**
      * @param args the command line arguments
@@ -147,8 +107,6 @@ public class EscolherModo extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jChooseHuman;
-    private javax.swing.JButton jChooseMachine;
-    private javax.swing.JTextField jIPMachine;
     private javax.swing.JLabel jLabel3;
     // End of variables declaration//GEN-END:variables
 }
